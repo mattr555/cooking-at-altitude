@@ -14,7 +14,10 @@ $(document).ready(function(){
 		}
 	});
 
-	var $altparticles = $('#alt_particles');
+	var $altparticles = $('#alt_particles'),
+		$press_alt = $('#press_alt'),
+		$press_press = $('#press_press'),
+		$press_bp = $('#press_bp');
 
 	for (var i = 0; i < NUM_PARTICLES; i++) {
 		$('<div class="particle"></div>')
@@ -22,4 +25,25 @@ $(document).ready(function(){
 			.css('left', Math.floor(Math.random()*300))
 			.appendTo($altparticles);
 	}
+
+	function altToPressure(alt){
+		return 29.921* Math.pow(1-6.8753*0.000001 * alt, 5.2559);
+	}
+
+	function pressureToBP(press){
+		return 49.161 * Math.log(press) + 44.932;
+	}
+
+	function FtoC(F){
+		return (F-32)*5/9;
+	}
+
+	$('#press_slider').on('input', function(){
+		var alt = this.value,
+			press = altToPressure(alt),
+			bp = FtoC(pressureToBP(press));
+		$press_alt.html(alt);
+		$press_press.html((25.4*press).toFixed(2));
+		$press_bp.html(bp.toFixed(2));
+	})
 });
