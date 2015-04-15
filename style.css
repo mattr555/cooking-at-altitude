@@ -1,3 +1,24 @@
 .jumbotron {
 	margin-top: 63px;
 }
+
+#alt_particles {
+	height: 300px;
+	width: 300px;
+	position: relative;
+	float: left;
+}
+
+.particle {
+	height: 4px;
+	width: 4px;
+	border-radius: 2px;
+	background-color: blue;
+	position: absolute;
+}
+
+#alt_slider {
+	-webkit-appearance: slider-vertical;
+	float: right;
+	width: 10px;
+}
