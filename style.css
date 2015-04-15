@@ -1,7 +1,3 @@
-.jumbotron {
-	margin-top: 63px;
-}
-
 #alt_particles {
 	height: 300px;
 	width: 300px;
@@ -23,6 +19,18 @@
 	width: 10px;
 }
 
+#press_slider {
+	width: 300px;
+}
+
+.press-wrap {
+	padding-top: 50px;
+}
+
 .row {
 	margin-bottom: 50px;
+}
+
+.image-wrap > img {
+	width: 100%;
 }

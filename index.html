@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,9 +20,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+            <!--
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
+            -->
           </ul>
           <p class="nav navbar-text navbar-right">By Matt Ramina '16</p>
         </div><!--/.nav-collapse -->
@@ -66,11 +68,25 @@
                 <p>The <em>boiling point</em> of a liquid is the temperature at which the vapor pressure of the liquid equals the pressure of the atmosphere around the liquid. At this point, liquid particles will break off the surface of the liquid and turn into vapor more quickly than the vapor around it turns back into liquid.</p>
                 <p>When the pressure of the gas surrounding a liquid is lower, less heat needs to be added to the liquid to reach the boiling point. In effect, this means that water boils at a lower temperature in high altitude situations. While we know water to boil at 100&deg;C at sea level, it boils at 98&deg;C at 2000 feet.</p>
             </div>
-            <div class="col-md-6">
-                <input type="range" id="press_slider" min="0" max="10000" step="500" value="0">
+            <div class="press-wrap col-md-6">
+                <input type="range" id="press_slider" min="0" max="15000" step="500" value="0">
                 Altitude: <span id="press_alt">0</span> feet<br>
                 Pressure: <span id="press_press">760</span> mm Hg<br>
                 Boiling Point of Water: <span id="press_bp">100</span>&deg;C<br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Cooking</h1>
+                <p>So, what does this all mean? For one thing, it means that any boiled foods, like spaghetti or potatoes, will take longer to cook. This doesn't make sense at first, because a lower boiling point corresponds to a shorter time to boil the water, right&#8253;&#8253; This is true, but a lower boiling point also means that the food takes longer to cook at this lower temperature. You may need to add a few minutes to these cooking times. Charles Darwin said of this effect:</p>
+                <blockquote>The elevation was probably not under 11,000 feet... At the place where we slept water necessarily boiled, from the diminished pressure of the atmosphere, at a lower temperature than it does in a less lofty country... Hence the potatoes, after remaining for some hours in the boiling water, were nearly as hard as ever.</blockquote>
+            </div>
+            <div class="col-md-3 image-wrap">
+                <img src="http://i01.i.aliimg.com/wsphoto/v0/1254362047/Camping-outdoor-cookware-font-b-pressure-b-font-cooker-camping-outdoor-font-b-pressure-b-font.jpg" width="300"><br>High altitude climbers employ pressure cookers to combat the effects of altitude on their cooking.
+            </div>
+            <div class="col-md-3 image-wrap">
+                <img src="https://joeydoesnotsharefood.files.wordpress.com/2011/02/spaghetti.jpg" alt=""><br>You'll need to increase your cooking time to serve a delectable meal like this one.
             </div>
         </div>
       </div>
