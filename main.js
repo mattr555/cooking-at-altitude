@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var NUM_PARTICLES = 100
 
 	$('#alt_slider').on('input', function(){
-		var to_remove = Math.floor(10*Math.log2(this.value)),
+		var to_remove = Math.floor(10*Math.sqrt(this.value)),
 			$particles = $('.particle');
 		console.log(to_remove);
 		$particles.show();
